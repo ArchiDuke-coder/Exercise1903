@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let num1 = prompt('Enter the first number: ');
+    let num2 = prompt('Enter the second number: ');
+    let opr = prompt('Enter +, -, x, or /');
+
+    let result = calculate(num1, num2, opr);
+    alert(num1 + ' '+opr+' '+num2+ ' = '+result);
+
+    function calculate(a, b, opr){
+        a = parseFloat(a);
+        b = parseFloat(b);
+        switch (opr){
+            case '+':
+                return a+b;
+                break;
+            case '-':
+                return a-b;
+                break;
+            case 'x':
+                return a*b;
+                break;
+            case '/':
+                return a/b;
+                break;
+        }
+    }
+
+
+</script>

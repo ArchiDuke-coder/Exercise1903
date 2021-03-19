@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex08</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    let list = [0,1,2,3,4,5,6,7];
+    document.write(list.join(', ')+'<br/>');
+    let index = parseInt(prompt('Enter the position you want to remove: '));
+    let removed = remove(list, index);
+    document.write(removed.join(', '));
+
+    function remove(arr, pos){
+        let b = [];
+        for (let j = 0; j < pos; j++){
+            b[j] = arr[j];
+        }
+        for (let i = pos+1; i < arr.length; i++){
+            b[i-1] = arr[i];
+        }
+        return b;
+    }
+
+
+
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex10</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*let size = parseInt(prompt('Enter the length of the array'));
+    let list = [];
+    for (let i = 0; i< size; i++){
+        list.push(prompt('Enter the '+(i+1)+'th number: '));
+    }
+    */
+
+    let list = [2,3,4,3,5,5,5,7,8,8];
+    console.log(list);
+    searchRepeat(list);
+
+    function searchRepeat(arr) {
+        while (arr.length > 0) {
+            let count = 0;
+            let value = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (value === arr[i]) {
+                    count++;
+                }
+            }
+            if (count > 1) {
+                console.log(value + " lặp " + count + " lần");
+                let j = 0;
+                while (j < arr.length) {
+                    if (value === arr[j]) {
+                        arr.splice(j, 1);
+                    } else {
+                        j++;
+                    }
+                }
+            } else {
+                arr.splice(0, 1);
+            }
+        }
+    }
+
+</script>

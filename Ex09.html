@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex09</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let size = parseInt(prompt('Enter the length of the array'));
+    let list = [];
+    for (let i = 0; i< size; i++){
+        list.push(prompt('Enter the '+(i+1)+'th number: '));
+    }
+    console.log(list);
+    val = prompt('Search something: ');
+    if (search(list, val)){
+        alert(val+' is in the array '+list.join(', '));
+    } else {
+        alert(val+ 's is NOT in the array '+ list.join(', '));
+    }
+
+    function search(arr, value){
+        let check = false;
+        for (let i = 0; i < arr.length; i++){
+            if (value == arr[i]){
+                check = true;
+            }
+        }
+        return check;
+    }
+
+</script>
